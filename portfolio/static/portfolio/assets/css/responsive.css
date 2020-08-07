@@ -59,11 +59,6 @@
     padding-left: 15px;
   }
 
-  .our-features-area .left-info {
-    padding-right: 15px;
-    margin-bottom: 50px;
-  }
-
   .our-features-area .feature-items .item {
     text-align: center;
   }
@@ -583,11 +578,6 @@
     padding-left: 15px;
   }
 
-  .our-features-area .left-info {
-    padding-right: 15px;
-    margin-bottom: 50px;
-  }
-
   .our-features-area .feature-items .item {
     text-align: center;
   }
@@ -881,7 +871,6 @@
 
 
   /* Blog */
-
   .blog-area .blog-items .footer-meta ul {
     border-top: none;
     padding-top: 0;

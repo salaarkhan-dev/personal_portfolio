@@ -1,58 +1,265 @@
-<!doctype html>
+{% load static %}
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
+
+
+<head>
+    <!-- ========== Meta Tags ========== -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Anada - Data Science & Analytics Template">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- ========== Page Title ========== -->
+    <title>Salaar Khan - Impossible is nothing</title>
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="{% static 'portfolio/assets/img/favicon.png' %}" type="image/x-icon">
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="{% static 'portfolio/assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'portfolio/assets/css/font-awesome.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'portfolio/assets/css/themify-icons.css' %}" rel="stylesheet" />
+    <link href="{% static 'portfolio/assets/css/flaticon-set.css' %}" rel="stylesheet" />
+    <link href="{% static 'portfolio/assets/css/magnific-popup.css' %}" rel="stylesheet" />
+    <link href="{% static 'portfolio/assets/css/owl.carousel.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'portfolio/assets/css/owl.theme.default.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'portfolio/assets/css/animate.css' %}" rel="stylesheet" />
+    <link href="{% static 'portfolio/assets/css/bootsnav.css' %}" rel="stylesheet" />
+    <link href="{% static 'portfolio/style.css' %}" rel="stylesheet">
+    <link href="{% static 'portfolio/assets/css/responsive.css' %}" rel="stylesheet" />
+    <!-- ========== End Stylesheet ========== -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5/html5shiv.min.js"></script>
+      <script src="assets/js/html5/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ========== Google Fonts ========== -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div class="se-pre-con"></div>
+    <!-- Preloader Ends -->
+
+    <!-- Header 
+    ============================================= -->
+    <!-- Header 
+    ============================================= -->
+    <header id="home">
+
+      <!-- Start Navigation -->
+      <nav class="navbar navbar-default transparent navbar-fixed navbar-transparent white bootsnav">
+
+          <div class="container">
+
+              <!-- Start Header Navigation -->
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                      <i class="fa fa-bars"></i>
+                  </button>
+                  <a class="navbar-brand smooth-menu" href="#home">
+                      <img src="{% static 'portfolio/assets/img/logo-light.png' %}" class="logo logo-display" alt="Logo">
+                      <img src="{% static 'portfolio/assets/img/logo.png' %}" class="logo logo-scrolled" alt="Logo">
+                  </a>
               </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
+              <!-- End Header Navigation -->
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="navbar-menu">
+                  <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                      
+                      <li>
+                          <a class="smooth-menu" href="#about1">About</a>
+                      </li>
+                      <li>
+                          <a class="smooth-menu" href="#services">Services</a>
+                      </li>
+                      <li>
+                          <a class="smooth-menu" href="#features">Features</a>
+                      </li>
+                      <li>
+                          <a class="smooth-menu" href="#skill">Skills</a>
+                      </li>
+                      <li>
+                          <a class="smooth-menu" href="#portfolio">Portfolio</a>
+                      </li>
+                      <li>
+                          <a class="smooth-menu" href="#contact">Contact</a>
+                      </li>
+                      <li>
+                          <a class="smooth-menu" href="{% static 'portfolio/assets/cv/cv.pdf' %}" download>View CV</a>
+                      </li>
+                  </ul>
+              </div><!-- /.navbar-collapse -->
+          </div>
+
       </nav>
+      <!-- End Navigation -->
+
+  </header>
+  <!-- End Header -->
 
       {% block content %}{% endblock %}
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+     <!-- Star Footer
+    ============================================= -->
+    <footer class="bg-dark text-light">
+      <div class="container">
+          <div class="f-items default-padding">
+              <div class="row">
+                  <div class="equal-height col-lg-4 col-md-6 item">
+                      <div class="f-item about">
+                          <a class="smooth-menu" href="#home"><img src="{%static 'portfolio/assets/img/logo-light.png' %}" alt="Logo"></a>
+                          <p>
+                              My goal is to satisfy the cutomer with my services. 
+                               I am eager to elaborate my skills through the tasks given to me. :)
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="equal-height col-lg-2 col-md-6 item">
+                      <div class="f-item link">
+                          <h4 class="widget-title">Usefull Links</h4>
+                          <ul>
+                              <li>
+                                  <a class="smooth-menu" href="#about1">About</a>
+                              </li>
+
+                              <li>
+                                  <a class="smooth-menu" href="#services">Services</a>
+                              </li>
+                              
+                              <li>
+                                  <a class="smooth-menu" href="#portfolio">Projects</a>
+                              </li>
+                              <li>
+                                  <a class="smooth-menu" href="#contact">Contact</a>
+                              </li>
+                              <li>
+                                  <a class="smooth-menu" href="#home">Home</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+
+                  <div class="equal-height col-lg-2 col-md-6 item">
+                      <div class="f-item link">
+                          <h4 class="widget-title">Services</h4>
+                          <ul>
+                              <li>
+                                  <a target="_blank" rel="noopener noreferrer" href="https://www.fiverr.com/share/emDLgj">Machine Learning</a>
+                              </li>
+                              <li>
+                                  <a target="_blank" rel="noopener noreferrer" href="https://www.fiverr.com/share/ye587b">Portfolio Development</a>
+                              </li>
+                              <li>
+                                  <a target="_blank" rel="noopener noreferrer" href="https://www.fiverr.com/share/emDLgj">Data Visualization</a>
+                              </li>
+                              <li>
+                                  <a target="_blank" rel="noopener noreferrer" href="https://www.fiverr.com/share/emDLgj">Data Analysis</a>
+                              </li>
+                              <li>
+                                  <a target="_blank" rel="noopener noreferrer" href="https://www.fiverr.com/share/jyrVx7">Consultation</a>
+                              </li>
+                              <li>
+                                  <a target="_blank" rel="noopener noreferrer" href="https://www.fiverr.com/share/jyrVx7">Assesments & Projects</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+
+                  <div class="equal-height col-lg-4 col-md-6 item">
+                      <div class="f-item contact">
+                          <h4 class="widget-title">Contact Info</h4>
+                          <p>
+                               To learn Ethical Hacking from scratch contact us now.
+                          </p>
+                          <div class="address">
+                              <ul>
+                                  <li>
+                                      <strong>Email:</strong> salaarkhan311@gmail.com
+                                  </li>
+                                  <li>
+                                      <strong>Contact:</strong> +92-304-1540073
+                                  </li>
+                              </ul>
+                          </div>
+                          <ul class="social">
+                              <li class="facebook">
+                                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/salaar.khan.7927408/"><i class="fab fa-facebook-f"></i></a>
+                              </li>
+                              <li class="instagram">
+                                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/salaarkhan-dev/"><i class="fab fa-github"></i></a>
+                              </li>
+
+                              <li class="twitter">
+                                  <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/salaar-khan1"><i class="fab fa-linkedin"></i></a>
+                              </li>
+                              
+                              <li class="youtube">
+                                  <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/salaar._.khan/"><i class="fab fa-instagram"></i></a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <div class="row">
+                  <div class="col-lg-6">
+                      
+                      <p>&copy; Created with <img alt="❤️" draggable="false" src="https://twemoji.maxcdn.com/2/72x72/2764.png" style="height: 1em; width: 1em; margin: 0px 0.05em 0px 0.1em; vertical-align: -0.1em;"> by <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/salaar.khan.7927408/"> Salaar Khan</a><a href="#"></a></p>
+                  </div>
+                  <div class="col-lg-6 text-right link">
+                      <ul>
+                          <li>
+                              <h6>Terms</h6>
+                          </li>
+                          <li>
+                              <h6>Privacy</h6>
+                          </li>
+                          <li>
+                              <h6>Support</h6>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Shape -->
+      <div class="footer-shape" style="background-image: url({% static 'portfolio/assets/img/shape/1.svg' %});"></div>
+      <!-- End Shape -->
+    </footer>
+    <!-- End Footer-->
+
+  <!-- jQuery Frameworks
+  ============================================= -->
+  <script src="{% static 'portfolio/assets/js/jquery-1.12.4.min.js' %}"></script>
+  <script src="{% static 'portfolio/assets/js/popper.min.js' %}"></script>
+  <script src="{% static 'portfolio/assets/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'portfolio/assets/js/equal-height.min.js' %}"></script>
+  <script src="{% static 'portfolio/assets/js/jquery.appear.js' %}"></script>
+  <script src="{% static 'portfolio/assets/js/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'portfolio/assets/js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'portfolio/assets/js/modernizr.custom.13711.js' %}"></script>
+  <script src="{% static 'portfolio/assets/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'portfolio/assets/js/wow.min.js' %}"></script>
+  <script src="{% static 'portfolio/assets/js/progress-bar.min.js' %}"></script>
+  <script src="{% static 'portfolio/assets/js/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'portfolio/assets/js/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'portfolio/assets/js/count-to.js' %}"></script>
+  <script src="{% static 'portfolio/assets/js/YTPlayer.min.js' %}"></script>
+  <script src="{% static 'portfolio/assets/js/circle-progress.js' %}"></script>
+  <script src="{% static 'portfolio/assets/js/bootsnav.js' %}"></script>
+  <script src="{% static 'portfolio/assets/js/main.js' %}"></script>
+
+</body>
+
 </html>

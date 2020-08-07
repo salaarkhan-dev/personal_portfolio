@@ -4,5 +4,5 @@ from .models import Project
 
 # Create your views here.
 def home(request):
-    projects = Project.objects.all()
-    return render(request, 'portfolio/home.html', {'projects': projects})
+    projects = Project.objects.order_by('-date')
+    return render(request, 'portfolio/home.html', {'projects': projects[:3]})

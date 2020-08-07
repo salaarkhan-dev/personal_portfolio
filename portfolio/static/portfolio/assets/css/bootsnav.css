@@ -2088,9 +2088,17 @@ nav.navbar.bootsnav {
     margin-top: 16px;
   }
 
+  nav.navbar.bootsnav.navbar-fixed.transparent .navbar-toggle {
+    margin-top: 22px;
+  }
+
   nav.navbar.bootsnav.navbar-fixed img {
     position: relative;
     top: 0;
+  }
+
+  nav.navbar.bootsnav.navbar-fixed.transparent img {
+    top: 5px;
   }
 
   nav.navbar.nav-box.bootsnav.navbar-fixed img {
@@ -2164,7 +2172,11 @@ nav.navbar.bootsnav {
   .navbar.navbar-fixed.transparent .attr-nav > ul > li {
     padding: 20px 0 !important;
   }
-  
+
+  .navbar.navbar-fixed.transparent .attr-nav > ul > li.contact {
+    padding: 25px 0 !important;
+  }
+
   nav.navbar-transparent .attr-nav > ul > li.contact {
     color: #232323 !important;
   }
@@ -2638,7 +2650,7 @@ nav.navbar.bootsnav {
   }
 
   nav.navbar.bootsnav.navbar-fixed .logo-scrolled {
-    display: inline-block !important;
+    display: block !important;
   }
 
   nav.navbar.bootsnav.navbar-fixed .logo-display {
