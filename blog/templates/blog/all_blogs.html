@@ -120,7 +120,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <h1>Salaar have written {{ blogs.count }} blog{{ blogs|pluralize}}</h1>
+                    <h1>Salaar have written {{ blogs.paginator.count }} blog{{ blogs|pluralize}}</h1>
                     <ul class="breadcrumb">
                         <li><a href="#"><i class="fas fa-home"></i> Blog</a></li>
                     </ul>
@@ -177,15 +177,26 @@
                         </div>
                         
                         <!-- Pagination -->
+                        
                         <div class="row">
                             <div class="col-md-12 pagi-area text-center">
                                 <nav aria-label="navigation">
                                     <ul class="pagination">
-                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
-                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
+                                        {% if blogs.has_previous %}
+                                        <li class="page-item"><a class="page-link" href="?page=1"><i class="fas fa-angle-double-left"></i></a></li>
+                                        <li class="page-item"><a class="page-link" href="?page={{ blogs.previous_page_number }}"><i class="fas fa-angle-left"></i></a></li>
+                                        {% endif %}
+                                        {% for num in blogs.paginator.page_range %}
+                                        {% if blogs.number == num %}
+                                        <li class="page-item active"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+                                        {% elif num > blogs.number|add:'-3' and num < blogs.number|add:'3' %}
+                                        <li class="page-item"><a class="page-link" href="?page={{ num }}">{{num}}</a></li>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% if blogs.has_next %}
+                                        <li class="page-item"><a class="page-link" href="?page={{ blogs.next_page_number }}"><i class="fas fa-angle-right"></i></a></li>
+                                        <li class="page-item"><a class="page-link" href="?page={{ blogs.paginator.num_pages }}"><i class="fas fa-angle-double-right"></i></a></li>
+                                        {% endif %}
                                     </ul>
                                 </nav>
                             </div>
