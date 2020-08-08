@@ -130,6 +130,8 @@
     </div>
     <!-- End Breadcrumb -->
 
+    {% if blogs.paginator.count > 0 %}
+
     <!-- Start Blog
     ============================================= -->
     <div class="blog-area full-blog blog-standard full-blog default-padding">
@@ -207,6 +209,34 @@
         </div>
     </div>
     <!-- End Blog -->
+
+    {% else %}
+         <!-- Start 404 
+    ============================================= -->
+    <div class="error-page-area overflow-hidden default-padding">
+        <!-- Shape Fixed Rotation -->
+        <div class="shape">
+            <img src="{% static 'portfolio/assets/img/shape/4.png' %}" alt="Thumb">
+        </div>
+        <!-- Dhape Fixed Rotation -->
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-6 thumb">
+                    <img src="{% static 'portfolio/assets/img/illustration/11.png' %}" alt="Thumb">
+                </div>
+                <div class="col-lg-6">
+                    <div class="error-box">
+                        <h1>Sorry</h1>
+                        <h2>no blogs found!</h2>
+                        
+                        <a class="btn circle btn-md btn-gradient" href="{% url 'home' %}">Back to home <i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End 404 -->
+    {% endif %}
 
      <!-- Star Footer
     ============================================= -->
